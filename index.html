@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones informais para os botões -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>BLOG DO CH 10/h1>
+            <p>compartilhando um pouco sobre mim.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Post do Blog -->
+        <article class="post" data-id="post-1">
+            <h2 class="post-title">Sobre mim</h2>
+            <p class="post-meta">Postado em 2 de Julho de 2026 por <strong>ch mala</strong></p>
+            
+            <div class="post-content">
+                <p>Olá! Me chamo Cauã Henrique, tenho 15 anos, gosto de jogar futebol, de ficar com meus amigos, de muitas outras coisas. 
+                    eu jogo bola desdos meus 3 anos de idade, sempre estive nos estadios com meu pai, eu lembro como se fosse hoje a priemira
+                    vez que eu fui no estadios do Juventude e do Corinthians.
+                o meu time do coraçâo sempre foi o timâo, sou apaixonado e louco pelo corinthians desde pequeno, puxei para meu pai </p>
+                <h2>Onde nasci?</h2>
+                <p>Nasci em Caxias do Sul-RS mas moro em Londrina-Pr</p>
+            </div>
+
+            <!-- Botões de Reação -->
+            <div class="post-actions">
+                <button class="btn-action btn-like" onclick="interagir('like')">
+                    <i class="fa-solid fa-thumbs-up"></i> <span id="like-count">0</span>
+                </button>
+                <button class="btn-action btn-dislike" onclick="interagir('dislike')">
+                    <i class="fa-solid fa-thumbs-down"></i> <span id="dislike-count">0</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- Seção de Comentários -->
+        <section class="comments-section">
+            <h3><i class="fa-regular fa-comments"></i> Comentários</h3>
+            
+            <!-- Formulário para novo comentário -->
+            <form id="comment-form">
+                <div class="form-group">
+                    <input type="text" id="comment-name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="comment-text" rows="4" placeholder="Escreva seu comentário aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Comentário</button>
+            </form>
+
+            <!-- Lista onde os comentários vão aparecer -->
+            <div id="comments-list">
+                <!-- Comentários JS entram aqui -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Meu Blog Pessoal. Feito com ❤️ e café.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
